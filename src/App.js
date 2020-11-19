@@ -5,7 +5,6 @@ const App = () => {
   useEffect(()=>{
     console.log(fibonacci(10))
   })
-
   return (
     <div className="App">
       <h2>Hello Tests</h2>

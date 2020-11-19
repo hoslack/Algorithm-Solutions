@@ -1,4 +1,4 @@
-export const fibonacci = (number) => {
+const fibonacci = (number) => {
   //  get the fibonacci numbers upto the last provided
   // return the last number
   let fibonacciArray = [0,1]
@@ -8,3 +8,4 @@ export const fibonacci = (number) => {
   // remove two numbers from the length because we had started with 0 and 1
   return fibonacciArray[fibonacciArray.length-2]
 }
+export default fibonacci
