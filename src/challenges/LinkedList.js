@@ -17,9 +17,9 @@ class LinkedList{
   }
 
   // insert last node
-  insertLast(data){
-    let node = new Node(data)
-  }
+  // insertLast(data){
+  //   let node = new Node(data)
+  // }
 
   // insert index
 

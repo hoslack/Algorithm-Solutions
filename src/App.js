@@ -1,9 +1,15 @@
 import React, {useEffect}  from 'react';
-import { fibonacci } from './challenges'
+import { numIslands } from './challenges'
 
 const App = () => {
+  const grid = [
+    ["1","1","1","1","0"],
+    ["1","1","0","1","0"],
+    ["1","1","0","0","0"],
+    ["0","0","0","0","0"]
+  ]
   useEffect(()=>{
-    console.log(fibonacci(10))
+    console.log(numIslands(grid))
   })
   return (
     <div className="App">
