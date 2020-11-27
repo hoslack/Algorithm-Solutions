@@ -14,8 +14,7 @@
       }
   }
 
-
-export const inorderTraversal = (root: TreeNode | null): number[] => {
+  const inorderTraversal = (root: TreeNode | null): number[] => {
 
     let tourist = root
     let solution: number[] = []
@@ -42,3 +41,5 @@ export const inorderTraversal = (root: TreeNode | null): number[] => {
     return solution
 
 }
+
+export default inorderTraversal
