@@ -1,15 +1,9 @@
 import React, {useEffect}  from 'react';
-import { numIslands } from './challenges'
+import { removeElement } from './challenges'
 
 const App = () => {
-  const grid = [
-    ["1","1","1","1","0"],
-    ["1","1","0","1","0"],
-    ["1","1","0","0","0"],
-    ["0","0","0","0","0"]
-  ]
   useEffect(()=>{
-    console.log(numIslands(grid))
+    console.log(removeElement([3,2,2,3],3))
   })
   return (
     <div className="App">
