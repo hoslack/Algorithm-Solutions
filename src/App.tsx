@@ -1,9 +1,9 @@
 import React, {useEffect}  from 'react';
-import { removeElement } from './challenges'
+import { productExceptSelf } from './challenges'
 
 const App = () => {
   useEffect(()=>{
-    console.log(removeElement([3,2,2,3],3))
+    console.log(productExceptSelf([1,2,3,4]))
   })
   return (
     <div className="App">

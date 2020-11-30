@@ -10,6 +10,7 @@ import numIslands from './numIslands'
 import addTwoNumbers from './addTwoNumbers'
 import inorderTraversal from './binaryTreeInorderTraversal-Morris'
 import removeElement from "./removeElements";
+import productExceptSelf from "./productOfArrayExceptSelf";
 
 export {
     fibonacci,
@@ -23,5 +24,6 @@ export {
     numIslands,
     addTwoNumbers,
     inorderTraversal,
-    removeElement
+    removeElement,
+    productExceptSelf
 }
