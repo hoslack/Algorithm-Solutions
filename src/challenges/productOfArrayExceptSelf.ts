@@ -12,14 +12,20 @@
 //     Could you solve it with constant space complexity? (The output array does not count as extra space for the purpose of space complexity analysis.)
 
 const productExceptSelf = (nums: number[]): number[] => {
-    let result: number[] = []
-    for (let i = 0; i < nums.length; i++) {
-        let temp = [...nums]
-        temp.splice(i, 1)
-        result.splice(i, 0, temp.reduce((a, b) => a * b))
-    }
+    let output: number[] = new Array(nums.length).fill(nums[0])
+    let cacheVar = nums[nums.length-1]
 
-    return result
+    for(let i =1; i<nums.length; i++){
+        output[i] = output[i-1]*nums[i]
+    }
+    output[nums.length-1] = output[output.length-2]
+    for(let j = nums.length-2; j>0; j--){
+        output[j] = output[j-1]*cacheVar
+        cacheVar = cacheVar*nums[j]
+    }
+    output[0] = cacheVar
+
+    return output
 }
 
 export default productExceptSelf
