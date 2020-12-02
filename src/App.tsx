@@ -1,9 +1,9 @@
 import React, {useEffect}  from 'react';
-import { productExceptSelf } from './challenges'
+import { isPalindrome } from './challenges'
 
 const App = () => {
   useEffect(()=>{
-    console.log(productExceptSelf([1,2,3,4]))
+    console.log(isPalindrome(-121))
   })
   return (
     <div className="App">

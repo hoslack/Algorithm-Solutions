@@ -9,8 +9,10 @@ import twoSumSorted from './twoSumSorted'
 import numIslands from './numIslands'
 import addTwoNumbers from './addTwoNumbers'
 import inorderTraversal from './binaryTreeInorderTraversal-Morris'
-import removeElement from "./removeElements";
-import productExceptSelf from "./productOfArrayExceptSelf";
+import removeElement from './removeElements'
+import productExceptSelf from './productOfArrayExceptSelf'
+import isPalindrome from './isPalindrome'
+
 
 export {
     fibonacci,
@@ -25,5 +27,6 @@ export {
     addTwoNumbers,
     inorderTraversal,
     removeElement,
-    productExceptSelf
+    productExceptSelf,
+    isPalindrome
 }
