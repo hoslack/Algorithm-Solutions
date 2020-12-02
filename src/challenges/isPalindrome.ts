@@ -24,17 +24,18 @@
 // Output: false
 
 // @ts-ignore
-const isPalindrome = (x: number): boolean  => {
-    const reverseInt = (num: number): number => {
-        let reversedNumber = 0, lastDigit =0;
-        while(num!==0){
-            lastDigit = num % 10
-            num = parseInt(String(num / 10))
-            reversedNumber = (reversedNumber * 10) + lastDigit
-            if (reversedNumber < Math.pow(-2, 31) || reversedNumber > Math.pow(2, 31) - 1) return 0
-        }
-        return reversedNumber
+
+const reverseInt = (num: number): number => {
+    let reversedNumber = 0, lastDigit =0;
+    while(num!==0){
+        lastDigit = num % 10 // get the last digit of the number
+        num = parseInt(String(num / 10)) //remove the last digit from the original number
+        reversedNumber = (reversedNumber * 10) + lastDigit
+        if (reversedNumber < Math.pow(-2, 31) || reversedNumber > Math.pow(2, 31) - 1) return 0
     }
+    return reversedNumber
+}
+const isPalindrome = (x: number): boolean  => {
     if((x<0 || x%10 === 0) && x !== 0){
         return false
     }
