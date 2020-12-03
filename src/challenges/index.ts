@@ -12,6 +12,7 @@ import inorderTraversal from './binaryTreeInorderTraversal-Morris'
 import removeElement from './removeElements'
 import productExceptSelf from './productOfArrayExceptSelf'
 import isPalindrome from './isPalindrome'
+import meetingRooms from "./meetRooms";
 
 
 export {
@@ -28,5 +29,6 @@ export {
     inorderTraversal,
     removeElement,
     productExceptSelf,
-    isPalindrome
+    isPalindrome,
+    meetingRooms
 }

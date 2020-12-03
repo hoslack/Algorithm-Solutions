@@ -1,9 +1,9 @@
 import React, {useEffect}  from 'react';
-import { isPalindrome } from './challenges'
+import { meetingRooms } from './challenges'
 
 const App = () => {
   useEffect(()=>{
-    console.log(isPalindrome(-121))
+    console.log(meetingRooms([[1,2], [1,3]]))
   })
   return (
     <div className="App">
