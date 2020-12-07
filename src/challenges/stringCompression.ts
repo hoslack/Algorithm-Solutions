@@ -22,8 +22,23 @@
 // Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
 
 // @ts-ignore
-const compress = (chars: string[]): number =>  {
+const compress = (chars: string[]): string[] =>  {
 
+    let index = 0
+    let i = 0
+    while(i<chars.length){
+        let j = i
+        while(j<chars.length && chars[j] === chars[i]){
+            j++
+        }
+        chars[index++] = chars[i]
+        if(j-i>1){
+
+        }
+
+    }
+
+    return chars
 };
 
 export default compress

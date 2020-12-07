@@ -1,9 +1,9 @@
 import React, {useEffect}  from 'react';
-import { meetingRooms } from './challenges'
+import { compress } from './challenges'
 
 const App = () => {
   useEffect(()=>{
-    console.log(meetingRooms([[1,2], [1,3]]))
+    console.log(compress(["a","a","b","b","c","c","c"]))
   })
   return (
     <div className="App">
