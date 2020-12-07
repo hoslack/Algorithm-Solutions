@@ -12,7 +12,8 @@ import inorderTraversal from './binaryTreeInorderTraversal-Morris'
 import removeElement from './removeElements'
 import productExceptSelf from './productOfArrayExceptSelf'
 import isPalindrome from './isPalindrome'
-import meetingRooms from "./meetRooms";
+import meetingRooms from "./meetRooms"
+import compress from "./stringCompression";
 
 
 export {
@@ -30,5 +31,6 @@ export {
     removeElement,
     productExceptSelf,
     isPalindrome,
-    meetingRooms
+    meetingRooms,
+    compress
 }
