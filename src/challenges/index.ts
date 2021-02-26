@@ -9,6 +9,7 @@ import numberOfSteps from "./numberOfSteps";
 import numIslands from "./numIslands";
 import productExceptSelf from "./productOfArrayExceptSelf";
 import removeElement from "./removeElements";
+import reverseInteger from "./reverseInteger";
 import singleNumber from "./singleNumber";
 import compress from "./stringCompression";
 import subtractProductAndSum from "./subtractProductAndSum";
@@ -34,4 +35,5 @@ export {
   meetingRooms,
   compress,
   wordLadder,
+  reverseInteger,
 };

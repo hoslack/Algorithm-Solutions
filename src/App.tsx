@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import { compress } from "./challenges";
+import { reverseInteger } from "./challenges";
 
-const App = () => {
+type AppProps = {};
+
+const App: React.FC<AppProps> = () => {
   useEffect(() => {
-    console.log(compress(["a", "a", "b", "b", "c", "c", "c"]));
+    console.log(reverseInteger(1534236469));
   });
   return (
     <div className="App">
