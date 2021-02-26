@@ -1,4 +1,3 @@
-
 // Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 //
 // Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
@@ -25,10 +24,10 @@
 // @ts-ignore
 
 const removeElement = (nums: number[], val: number): number => {
-    while(nums.indexOf(val) > -1){
-        nums.splice(nums.indexOf(val),1)
-    }
-return nums.length
+  while (nums.indexOf(val) > -1) {
+    nums.splice(nums.indexOf(val), 1);
+  }
+  return nums.length;
 };
 
-export default removeElement
+export default removeElement;
