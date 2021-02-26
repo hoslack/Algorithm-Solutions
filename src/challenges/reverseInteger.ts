@@ -36,7 +36,6 @@ const reverseInteger = (x: number): number => {
     flag = 1;
   }
   const integer = String(x).split("").reverse().join("");
-  console.log(-2 ^ 31);
   if (
     Number(integer) * flag < -2147483648 ||
     Number(integer) * flag > 2147483647
