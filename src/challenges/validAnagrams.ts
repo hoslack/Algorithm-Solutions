@@ -23,6 +23,33 @@
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
 const isAnagram = (s: string, t: string): boolean =>  {
+//     const sMap = new Map<string, number>()
+//     const tMap = new Map<string, number>()
+//     for (const char of s) {
+//         if (sMap.has(char)) {
+//             sMap.set(char, sMap.get(char)! + 1)
+//         } else {
+//             sMap.set(char, 1)
+//         }
+//     }
+//     for (const char of t) {
+//         if (tMap.has(char)) {
+//             tMap.set(char, tMap.get(char)! + 1)
+//         } else {
+//             tMap.set(char, 1)
+//         }
+//     }
+//     if (sMap.size !== tMap.size) {
+//         return false
+//     }
+//     for (const [key, value] of sMap) {
+//         if (tMap.get(key) !== value) {
+//             return false
+//         }
+//     }
+//     return true
+
+
     if(s.length !== t.length){
         return false
     }

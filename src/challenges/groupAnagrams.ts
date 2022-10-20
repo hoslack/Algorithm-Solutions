@@ -24,48 +24,18 @@
 // 0 <= strs[i].length <= 100
 // strs[i] consists of lowercase English letters.
 
-
+// TODO: implement this function to work with empty strings and single letter strings
 const groupAnagrams = (strs: string[]): string[][] => {
-
-    function isAnagram(s: string, t: string): boolean {
-        if(s.length !== t.length){
-            return false
-        }
-        if(s=="" && t==""){
-            return true
-        }
-        const sArr = s.split("").sort()
-        const tArr = t.split("").sort()
-    
-        let flag = true
-    
-        if(tArr.join() === sArr.join()){
-            flag = true
-        }else {
-            flag = false
-        }
-     return flag
-    };
-    
-    
-    
-    const result = []
-    
-    while(strs.length>=1){
-    const current = strs.shift() || ""
-    const currentArr = [current]
-    for(let i=0; i<strs.length; i++){
-        if(isAnagram(current, strs[i])){
-            currentArr.push(strs[i])
-            strs.splice(i, 1)
-        }
+    const anagrams = new Map<string, string[]>()
+    for (const str of strs) {
+        const sortedStr = str.split("").sort().join("")
+        if (anagrams.has(sortedStr)) {
+            anagrams.get(sortedStr)?.push(str)
+        } else {
+            anagrams.set(sortedStr, [str])
+        }   
     }
-    
-    result.push(currentArr)
-    }
-    
-    return result
-    
-    };
+    return Array.from(anagrams.values())
+}
 
 export default groupAnagrams
