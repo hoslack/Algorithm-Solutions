@@ -23,17 +23,18 @@
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
 const topKFrequent = (nums: number[], k: number): number[] => {
-    const frequencyMap = new Map<number, number>()
-    for (const num of nums) {
-        if (frequencyMap.has(num)) {
-            frequencyMap.set(num, frequencyMap.get(num)! + 1)
+    const frequencyMap = new Map<number, number>() // O(1) for creating the map
+    for (const num of nums) { // O(n)
+        if (frequencyMap.has(num)) { // O(1) for checking if the map has the key
+            frequencyMap.set(num, frequencyMap.get(num)! + 1) // O(1) for getting the value and O(1) for setting the value
         } else {
-            frequencyMap.set(num, 1)
+            frequencyMap.set(num, 1) // O(1) for setting the value
         }
     }
-    const frequencyArray = Array.from(frequencyMap.entries())
-    frequencyArray.sort((a, b) => b[1] - a[1])
-    return frequencyArray.slice(0, k).map((entry) => entry[0])
+    const frequencyArray = Array.from(frequencyMap.entries()) // O(n) for creating the array
+    frequencyArray.sort((a, b) => b[1] - a[1]) // O(n log n) for sorting the array
+    return frequencyArray.slice(0, k).map((entry) => entry[0]) // O(k) for creating the array
 }
+
 
 export default topKFrequent
