@@ -53,7 +53,6 @@ function productExceptSelf(nums: number[]): number[] {
     result.push(left[k] * right[k])
   }
 
-  console.log({ left, right })
   return result
 }
 
