@@ -31,4 +31,25 @@ const isPalindrome = (s: string): boolean => {
   return alphanumeric === reversed
 }
 
+// Time complexity: O(n)
+// Space complexity: O(n)
+const isPalindromeTwoPointer = (s: string): boolean => {
+  const alphanumeric = s.toLowerCase().replace(/[^a-z0-9]/g, "") // O(n) time, O(n) space
+  let left = 0 // O(1) space
+  let right = alphanumeric.length - 1 // O(1) space
+
+  while (left < right) {
+    // O(n) time
+    if (alphanumeric[left] !== alphanumeric[right]) {
+      // O(1) time
+      return false // O(1) time
+    }
+
+    left += 1 // O(1) time
+    right -= 1 // O(1) time
+  }
+
+  return true
+}
+
 export default isPalindrome
