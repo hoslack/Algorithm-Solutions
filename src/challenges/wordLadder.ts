@@ -33,6 +33,8 @@
 //
 // Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.
 
-const wordLadder = () => {};
+const wordLadder = (beginWord: string, endWord: string, wordList: string[]) => {
+  return 0
+}
 
-export default wordLadder;
+export default wordLadder
